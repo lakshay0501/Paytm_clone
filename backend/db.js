@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const { number } = require('zod');
 
-mongoose.connect('mongodb://localhost:27017/PaytmClone?directConnection=true')
+// mongoose.connect('mongodb://localhost:27017/PaytmClone?directConnection=true')
+mongoose.connect('mongodb+srv://lakshayarora2905:Rblj2905@m0.hsmbk30.mongodb.net/?retryWrites=true&w=majority&appName=M0')
+.then(()=>{
+    console.log("database connected")
+})
 
 const UserSchema = new mongoose.Schema({
     username: {
