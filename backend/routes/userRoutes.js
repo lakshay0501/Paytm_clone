@@ -104,6 +104,15 @@ router.post('/signin',async (req,res)=>{
 
 })
 
+router.post('/signout',async(req,res)=>{
+
+    console.log(res);
+
+    res.clearCookie("token");
+
+    res.status(200).json({message:"user logged out successfully"})
+})
+
 router.put('/',authMiddleWare,async (req,res)=>{
     const success = updateInBody.safeParse(req.body)
 

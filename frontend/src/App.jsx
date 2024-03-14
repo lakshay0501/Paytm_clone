@@ -8,6 +8,7 @@ import { Signin } from "./pages/Signin";
 import { Dashboard } from "./pages/DashBoard";
 import { SendMoney } from "./pages/SendMoney";
 import './index.css'
+import { Signout } from "./pages/Signout";
 
 function App() {
 
@@ -24,6 +25,8 @@ function App() {
            <Route path="/dashboard" element={<Dashboard/>}></Route>
            
            <Route path="/send" element={<SendMoney/>}></Route>
+
+           <Route path="/signout" element={<Signout/>}></Route>
       
         </Routes>
 

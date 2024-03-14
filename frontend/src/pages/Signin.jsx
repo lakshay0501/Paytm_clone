@@ -30,6 +30,8 @@ export const Signin = () => {
                 })
 
                 const {token} = response.data;
+
+                localStorage.setItem('token',token)
                 
                 navigate('/dashboard')
             } catch(err){
