@@ -136,11 +136,11 @@ router.get('/bulk',async (req,res)=>{
     const users = await User.find({
        $or : [{
           firstName : {
-             $regex:filter
+             $regex:new RegExp(filter, 'i')
           }
        },{
           lastName:{
-            $regex:filter
+            $regex:new RegExp(filter, 'i')
           }
        }]
     })
