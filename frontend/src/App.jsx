@@ -2,6 +2,7 @@ import {
   BrowserRouter,
   Route,
   Routes,
+  Navigate
 } from "react-router-dom";
 import { Signup } from './pages/Signup'
 import { Signin } from "./pages/Signin";
@@ -27,9 +28,10 @@ function App() {
            <Route path="/send" element={<SendMoney/>}></Route>
 
            <Route path="/signout" element={<Signout/>}></Route>
+
+           <Route path="/" element={<Navigate to="/signin" />} />
       
         </Routes>
-
         
       </BrowserRouter>
     </>

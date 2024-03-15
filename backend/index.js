@@ -10,7 +10,7 @@ app.use(cors())
 
 
 app.get('/',(req,res)=>{
-    res.send("Hello World")
+    res.redirect('/api/v1/user/signin')
 })
 
 app.use('/api/v1',rootRouter);
